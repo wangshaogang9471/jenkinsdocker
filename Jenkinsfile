@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('pull code') {
+            steps {
+                echo '开始拉取代码'
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/wangshaogang9471/jenkinsdocker.git']]])
+                echo '代码拉取完成'
+            }
+        }
+        stage('构建项目') {
+            steps {
+                echo '开始构建项目'
+                sh 'mvn clean package'
+                echo '项目构建结束'
+            }
+        }
+        stage('publish project') {
+            steps {
+                echo 'publish project'
+            }
+        }
+    }
+}
