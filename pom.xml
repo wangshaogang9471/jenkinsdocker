@@ -44,7 +44,7 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <configuration>
-                    <imageName>${project.name}</imageName>
+                    <imageName>springcloud</imageName>
                     <imageTags>
                         <imageTag>test</imageTag>
                         <tag>cloud</tag>
