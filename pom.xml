@@ -43,6 +43,10 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
+                <configuration>
+                    <imageName>${project.name}</imageName>
+                    <imageTags>test</imageTags>
+                </configuration>
                <!-- <version>1.0.0</version>-->
             </plugin>
         </plugins>
