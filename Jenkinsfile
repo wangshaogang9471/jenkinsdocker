@@ -12,7 +12,7 @@ pipeline {
         stage('构建项目') {
             steps {
                 echo '开始构建项目'
-                sh 'mvn clean package'
+                sh 'mvn clean package dockerfile:build'
                 echo '项目构建结束'
             }
         }
