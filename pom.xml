@@ -42,13 +42,12 @@
 
             <plugin>
                 <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>1.2.2</version>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.13</version>
                 <configuration>
-                    <imageName>${project.artifactId}</imageName>
-                    <imageTags>
-                        <imageTag>develop</imageTag>
-                    </imageTags>
+                    <repository>${project.artifactId}</repository>
+                    <tag>test</tag>
+                    <tag>develop</tag>
                 </configuration>
             </plugin>
         </plugins>
