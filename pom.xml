@@ -45,7 +45,10 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <configuration>
                     <imageName>${project.name}</imageName>
-                    <imageTags>test</imageTags>
+                    <imageTags>
+                        <imageTag>test</imageTag>
+                        <tag>cloud</tag>
+                    </imageTags>
                 </configuration>
                 <version>1.2.2</version>
             </plugin>
